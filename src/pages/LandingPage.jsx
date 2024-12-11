@@ -6,55 +6,61 @@ import { Code2, Github, Twitter, Linkedin } from "lucide-react";
 const features = [
     {
         icon: <Code className="w-6 h-6 text-blue-600" />,
-        title: "Syntax Highlighting",
-        description: "Enjoy seamless coding with beautiful syntax highlighting for over 100 programming languages, making your code easy to read and understand."
+        title: "Enhanced Syntax Highlighting",
+        description: "Experience superior syntax highlighting for over 150 programming languages, designed to improve code readability and streamline your workflow."
     },
     {
         icon: <Share2 className="w-6 h-6 text-blue-600" />,
-        title: "Easy Sharing",
-        description: "Effortlessly share your snippets with teammates or make them public to help the developer community grow and collaborate."
+        title: "Seamless Collaboration",
+        description: "Collaborate effortlessly with your team by sharing code snippets securely, or contribute to the developer community by making them public."
     },
     {
         icon: <Search className="w-6 h-6 text-blue-600" />,
-        title: "Smart Search",
-        description: "Use AI-powered search to quickly find the snippets you need, saving you time and boosting productivity."
+        title: "AI-Powered Search",
+        description: "Quickly locate the exact code snippet you need using our intelligent AI search, boosting your efficiency and productivity."
     },
     {
         icon: <Zap className="w-6 h-6 text-blue-600" />,
-        title: "Quick Access",
-        description: "Access your snippets from anywhere with our lightweight browser extension, designed for maximum convenience."
+        title: "Cross-Platform Access",
+        description: "Access and manage your snippets anytime, anywhere with our responsive web app and lightweight browser extension."
     }
 ];
 
 const stats = [
-    { number: "100K+", label: "Developers" },
-    { number: "1M+", label: "Snippets Stored" },
-    { number: "50K+", label: "Teams" },
-    { number: "99.9%", label: "Uptime" }
+    { number: "200K+", label: "Active Developers" },
+    { number: "2M+", label: "Snippets Stored" },
+    { number: "100K+", label: "Teams Collaborating" },
+    { number: "99.99%", label: "Uptime Guaranteed" }
 ];
 
 const faqs = [
     {
         question: "How do I get started with CodeClip?",
         answer:
-            "Sign up for a free account and start storing your code snippets right away. Our intuitive interface makes it easy to organize and manage your code."
+            "Simply sign up for a free account and start saving your code snippets. Our intuitive dashboard makes managing your code effortless."
     },
     {
         question: "Can I share snippets with my team?",
         answer:
-            "Yes! CodeClip offers team collaboration features. You can share snippets privately with team members or make them public for the community."
+            "Absolutely! CodeClip enables secure snippet sharing with team members, with options for private or public visibility."
     },
     {
         question: "What programming languages are supported?",
         answer:
-            "We support over 100 programming languages with syntax highlighting, including JavaScript, Python, Ruby, Java, C++, and many more."
+            "CodeClip supports syntax highlighting for over 150 programming languages, including JavaScript, Python, Java, C++, Go, and many more."
     },
     {
-        question: "Is there a limit to how many snippets I can store?",
+        question: "Are there storage limitations?",
         answer:
-            "Free accounts can store up to 100 snippets. Premium accounts have unlimited storage and additional features."
+            "Free accounts can store up to 200 snippets, while premium accounts offer unlimited storage along with exclusive features like advanced analytics."
+    },
+    {
+        question: "Is my data secure?",
+        answer:
+            "Yes! We prioritize your data's security with end-to-end encryption and regular backups to ensure your snippets are always safe."
     }
-]
+];
+
 
 function LandingPage() {
     return (
@@ -88,13 +94,14 @@ function LandingPage() {
                     <h2 className="text-3xl font-bold text-center mb-12">
                         Everything you need to manage your code snippets
                     </h2>
-                    <div className="flex flex-wrap items-center justify-center gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                         {features.map((feature, index) => (
                             <article
                                 key={index}
-                                className="p-6 rounded-xl border border-gray-200 hover:border-indigo-200 transition cursor-pointer hover:bg-indigo-600/10 w-[280px] h-[190px] flex items-center justify-center flex-col"
+                                className="p-6 rounded-xl border border-gray-200 hover:border-indigo-200 transition cursor-pointer hover:bg-indigo-600/10 flex items-center justify-start flex-col text-center"
                             >
-                                <h3 className="text-xl font-semibold mb-2 flex items-center gap-4"><span>{feature.icon}</span>{feature.title}</h3>
+                                <div className="mb-2">{feature.icon}</div>
+                                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
                                 <p className="text-gray-600 text-sm text-center">{feature.description}</p>
                             </article>
                         ))}
@@ -103,7 +110,7 @@ function LandingPage() {
             </section>
 
             {/* stats */}
-            <section className="bg-indigo-50 py-16">
+            <section className="bg-indigo-100 py-16">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {stats.map((stat, index) => (
@@ -142,7 +149,7 @@ function LandingPage() {
             </section>
 
             {/* cta section */}
-            <section className="py-20 bg-indigo-600">
+            <section className="py-20 bg-indigo-600/90">
                 <div className="max-w-4xl mx-auto px-6 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                         Ready to streamline your code management?
