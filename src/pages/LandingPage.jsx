@@ -3,6 +3,7 @@ import React from 'react';
 import { Code, Share2, Search, Zap } from "lucide-react";
 import { Github, Twitter, Linkedin } from "lucide-react";
 import { Link } from 'react-router-dom';
+import Header from '@/components/custom/Header';
 
 const features = [
     {
@@ -66,6 +67,8 @@ const faqs = [
 function LandingPage() {
     return (
         <main className='relative w-full min-h-screen bg-gradient-to-b from-indigo-50 to-indigo-400 backdrop-blur-md'>
+            {/* Herder  */}
+            <Header />
             {/* hero */}
             <section className="pt-32 pb-20">
                 <div className="max-w-7xl mx-auto px-6 text-center">
