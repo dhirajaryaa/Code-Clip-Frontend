@@ -174,16 +174,17 @@ function LandingPage() {
                 <div className="max-w-7xl mx-auto px-6 py-12 text-center">
                     <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
                         <div className="text-sm">
-                            © {new Date().getFullYear()} CodeClip. All rights reserved.
+                            © {new Date().getFullYear()} CodeClip. All rights reserved. <span className="text-red-600">❤️</span> by <a href="https://dhirajarya.com" className="hover:text-white transition" aria-label="Dhiraj Arya" target='_blank'>Dhiraj Arya</a>
                         </div>
+
                         <div className="flex gap-4">
-                            <a href="#github" className="hover:text-white transition" aria-label="Github">
+                            <a href="https://github.com/dhirajaryaa" className="hover:text-white transition" aria-label="Github" target='_blank'>
                                 <Github className="w-5 h-5" />
                             </a>
-                            <a href="#twitter" className="hover:text-white transition" aria-label="Twitter">
+                            <a href="https://x.com/dhirajaryaa" className="hover:text-white transition" aria-label="Twitter" target='_blank'>
                                 <Twitter className="w-5 h-5" />
                             </a>
-                            <a href="#linkedin" className="hover:text-white transition" aria-label="Linkedin">
+                            <a href="https://www.linkedin.com/in/dhirajaryaa0/" className="hover:text-white transition" aria-label="Linkedin" target='_blank'>
                                 <Linkedin className="w-5 h-5" />
                             </a>
                         </div>
