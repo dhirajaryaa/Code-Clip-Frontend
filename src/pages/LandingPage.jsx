@@ -1,7 +1,8 @@
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import React from 'react';
 import { Code, Share2, Search, Zap } from "lucide-react";
-import { Code2, Github, Twitter, Linkedin } from "lucide-react";
+import { Github, Twitter, Linkedin } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const features = [
     {
@@ -78,12 +79,15 @@ function LandingPage() {
                         snippets. Powered by AI for better code organization and discovery.
                     </p>
                     <div className="flex gap-4 justify-center">
-                        <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition flex items-center gap-2 text-lg">
+
+                        <Link to={"/signup"} className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition flex items-center gap-2 text-lg">
                             Get Started Free <ArrowRight className="w-4 h-4" />
-                        </button>
-                        <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition text-lg">
+                        </Link>
+
+                        <Link to="/demo" className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition text-lg">
                             View Demo
-                        </button>
+                        </Link>
+
                     </div>
                 </div>
             </section>
@@ -159,12 +163,12 @@ function LandingPage() {
                         management.
                     </p>
                     <div className="flex gap-4 justify-center">
-                        <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50 transition flex items-center gap-2 text-lg hover:bg-white/80">
+
+                        <Link to={"/signup"} className="bg-white text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50 transition flex items-center gap-2 text-lg hover:bg-white/80">
                             Get Started Free <ArrowRight className="w-4 h-4" />
-                        </button>
-                        <button className="border border-white text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition text-lg">
-                            Contact Sales
-                        </button>
+                        </Link>
+
+
                     </div>
                 </div>
             </section>
@@ -196,3 +200,4 @@ function LandingPage() {
 }
 
 export default LandingPage;
+
