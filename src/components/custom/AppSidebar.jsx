@@ -8,11 +8,10 @@ import {
     SidebarGroupLabel,
     SidebarHeader,
     SidebarMenu,
-    SidebarMenuBadge,
     SidebarMenuButton,
     SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { Logo } from "."
+import { LanguagesNav, Logo } from "."
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -56,10 +55,10 @@ const AppSidebar = (props) => {
                     </SidebarMenuItem>
                 </SidebarMenu>
             </SidebarHeader>
-            <SidebarContent className="mt-10 px-8">
+            <SidebarContent className="mt-6 px-8">
                 {/* nav links  */}
                 <SidebarGroup>
-                    <SidebarGroupLabel className="text-lg my-4">Quick Links</SidebarGroupLabel>
+                    <SidebarGroupLabel className="text-lg my-1">Quick Links</SidebarGroupLabel>
                     <SidebarGroupContent>
                         <SidebarMenu className="gap-3">
                             {NavLinks.map((item) => (
@@ -67,7 +66,9 @@ const AppSidebar = (props) => {
                                     <Link
                                         to={item.url}
                                         onClick={() => setIsLinkActive(item.name)}
-                                        className={`flex items-center gap-2 rounded-md p-2 text-lg font-normal text-sidebar-foreground  cursor-pointer  ${isLinkActive === item.name ? "bg-sidebar-primary text-sidebar-primary-foreground" : "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"} `}>
+                                        className={`flex items-center gap-2 rounded-md  px-2 py-1  text-lg font-normal text-sidebar-foreground  cursor-pointer  ${isLinkActive === item.name ? "bg-sidebar-primary text-sidebar-primary-foreground" : "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"} `}
+                                        aria-current={isLinkActive === item.name ? "page" : undefined}
+                                    >
                                         {item.icon}
                                         {item.name}
                                     </Link>
@@ -76,6 +77,8 @@ const AppSidebar = (props) => {
                         </SidebarMenu>
                     </SidebarGroupContent>
                 </SidebarGroup>
+                {/* LanguagesNavLinks */}
+                <LanguagesNav />
             </SidebarContent>
         </Sidebar>
     )
