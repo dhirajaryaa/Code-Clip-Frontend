@@ -4,7 +4,6 @@ import { SidebarInset, SidebarProvider, SidebarTrigger } from "../components/ui/
 import { Button } from "@/components/ui/button.jsx";
 import { Input } from "@/components/ui/input.jsx";
 import { Plus } from "lucide-react";
-import { useState } from "react";
 
 const Dashboard = () => {
 
@@ -37,7 +36,7 @@ const Dashboard = () => {
           </header>
           {/* Tags and Filters  */}
             <FilterTags />
-          {/* this is content  */}
+          {/* snippet list */}
           <h1>This is main container</h1>
         </main>
       </SidebarInset>
