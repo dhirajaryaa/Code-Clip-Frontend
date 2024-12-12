@@ -1,6 +1,10 @@
+import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuTrigger } from "@/components/ui/dropdown-menu.jsx";
 import { AppSidebar, UserAvatar } from "../components/custom/index.js";
 import { Separator } from "../components/ui/separator";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "../components/ui/sidebar";
+import { Button } from "@/components/ui/button.jsx";
+import { Input } from "@/components/ui/input.jsx";
+import { Plus } from "lucide-react";
 
 const Dashboard = () => {
   return (
@@ -8,17 +12,29 @@ const Dashboard = () => {
       style={{
         "--sidebar-width": "19rem",
       }}
-    >
+      className="bg-gray-200/50">
       <AppSidebar />
-      <SidebarInset >
-        <main className="p-4 ">
+      <SidebarInset className="bg-gray-200/50">
+        <main className="p-3 ">
           {/* dashboard header  */}
-          <header className="flex items-center justify-start">
+          <header className="flex items-center justify-between bg-sidebar py-2 px-4 rounded-md shadow-md">
+            {/* sidebar open/close btn   */}
+            <div className="flex items-center">
 
-            <SidebarTrigger className="-ml-1 "  />
-            <Separator orientation="vertical" className="mr-2 h-4" />
-            <UserAvatar className={"w-8 h-8"}/>
+              <SidebarTrigger className="-ml-1 " />
+              <Separator orientation="vertical" className=" mx-1 h-4" />
+              {/* user profile  */}
+              <UserAvatar className={"w-8 h-8"} />
+            </div>
+            {/* search and new snippet create  */}
+            <div className="flex w-full max-w-sm items-center space-x-2">
+              <Input type="text" placeholder="Search Code Snippet..." />
+              <Button type="button" variant="default" >
+                <Plus size={64} />
+                Add Snippet</Button>
+            </div>
           </header>
+          {/* this is content  */}
           <h1>This is main container</h1>
         </main>
       </SidebarInset>
