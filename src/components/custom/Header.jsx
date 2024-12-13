@@ -15,11 +15,11 @@ function Header() {
                             <UserAvatar />
                         ) : (
                             <>
-                            <Link to="/signup">
+                            <Link to="/register">
                                 <Button variant="outline" className="border-2 duration-300 hover:bg-violet-600/20 hover:border-violet-600/20 ">Sign up</Button>
                             </Link>
                             <Link to="/login">
-                                <Button className="bg-violet-600 hover:bg-violet-500 ">Sign in</Button>
+                                <Button variant="default">Sign in</Button>
                             </Link>
                             </>
                         )

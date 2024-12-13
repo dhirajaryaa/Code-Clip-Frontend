@@ -1,8 +1,7 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './layout/layout.jsx'
-import { LandingPage } from './pages/index.js'
-import { Dashboard } from './pages/index.js'
+import { LandingPage, Login, Register ,Dashboard} from './pages/index.js'
 
 function App() {
 
@@ -14,6 +13,14 @@ function App() {
         {
           path: "/",
           element: <LandingPage />
+        },
+        {
+          path: "/login",
+          element: <Login />
+        },
+        {
+          path: "/register",
+          element: < Register/>
         },
         {
           path: "/dashboard",
