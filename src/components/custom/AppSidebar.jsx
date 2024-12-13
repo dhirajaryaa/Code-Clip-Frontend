@@ -79,6 +79,7 @@ const AppSidebar = (props) => {
                 </SidebarGroup>
                 {/* LanguagesNavLinks */}
                 <LanguagesNav />
+                
             </SidebarContent>
         </Sidebar>
     )
